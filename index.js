@@ -89,6 +89,12 @@ class Mailbox {
         return responseHandler(result)
     }
 
+    async getMessages(idsArray) {
+        let result = await axios.post(devMailApi.messagesUrl(this.name), idsArray, this.authHeader)
+
+        return responseHandler(result)
+    }
+
     async sendMessage(mail) {
 
         let config = this.authHeader
