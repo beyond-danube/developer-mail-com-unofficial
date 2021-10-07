@@ -6,7 +6,7 @@ Unofficial wrapper for https://www.developermail.com disposable email service.
 Developer Mail is quite nice disposable email service that does not require registration and does not have API calls limit.  
 
 ## Module usage
-Mailbox class constuctor accepts name and token from Developer Mail. In case you did yse it in past, you can use your credentials. If not, you can simply create new Mailbox, credentials will be assigned to class instance.  
+Mailbox class constuctor accepts name and token from Developer Mail. In case you did use it in past, you can use your credentials. If not, you can simply create new Mailbox, credentials will be assigned to class instance.  
 
 ### Usage example
 ```JavaScript

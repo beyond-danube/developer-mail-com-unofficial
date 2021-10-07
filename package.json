@@ -1,6 +1,6 @@
 {
   "name": "developer-mail-com-unofficial",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Wrapper for developermail.com disposable email service",
   "main": "index.js",
   "scripts": {
@@ -22,8 +22,8 @@
     "type": "git",
     "url": "https://github.com/beyond-danube/developer-mail-com-unofficial.git"
   },
-    "bugs": "https://github.com/beyond-danube/developer-mail-com-unofficial/issues",
-    "homepage": "https://www.npmjs.com/package/developer-mail-com-unofficial",    
+  "bugs": "https://github.com/beyond-danube/developer-mail-com-unofficial/issues",
+  "homepage": "https://www.npmjs.com/package/developer-mail-com-unofficial",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.21.4"
