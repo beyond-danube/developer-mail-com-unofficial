@@ -76,6 +76,29 @@ describe('Basic Developer Mail Tests', function () {
         })
     })
 
+    it('Get Messages By Ids', async function() {
+        await mail.sendMessage(letter)
+        await mail.sendMessage(letter)
+        await mail.sendMessage(letter)
+
+        let messagesIds = await mail.getMessagesIds()
+
+        let newMessageIds = []
+
+        for (let i = 0; i < messagesIds.length - 1; i++) {
+            newMessageIds.push(messagesIds[i])
+        }
+
+        let result = await mail.getMessages(newMessageIds)
+
+        assert.equal(result.length, 2)
+
+        result.forEach(mail => {
+            assert.isNotEmpty(mail.key)
+            assert.isNotEmpty(mail.value)
+        })
+    })
+
     it('Delete Message By Id', async function() {
         await mail.sendMessage(letter)
 
