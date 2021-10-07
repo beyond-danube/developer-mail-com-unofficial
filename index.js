@@ -83,7 +83,7 @@ class Mailbox {
         return responseHandler(result)
     }
 
-    async getMessageById(id) {
+    async getMessage(id) {
         let result = await axios.get(devMailApi.messageByIdUrl(this.name, id), this.authHeader)
 
         return responseHandler(result)
@@ -99,6 +99,11 @@ class Mailbox {
         return responseHandler(result)
     }
 
+    async deleteMessage(id) {
+        let result = await axios.delete(devMailApi.messageByIdUrl(this.name, id), this.authHeader)
+
+        return responseHandler(result)
+    }
     
 }
 
