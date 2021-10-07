@@ -1,5 +1,6 @@
-# developer-mail-com-unofficial [![Build Status](https://app.travis-ci.com/beyond-danube/developer-mail-com-unofficial.svg?branch=main)](https://app.travis-ci.com/beyond-danube/developer-mail-com-unofficial)
-
+# developer-mail-com-unofficial
+[![Build Status](https://app.travis-ci.com/beyond-danube/developer-mail-com-unofficial.svg?branch=main)](https://app.travis-ci.com/beyond-danube/developer-mail-com-unofficial)
+  
 Unofficial wrapper for https://www.developermail.com disposable email service.  
 
 Developer Mail is quite nice disposable email service that does not require registration and does not have API calls limit.  
