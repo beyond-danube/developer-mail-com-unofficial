@@ -18,7 +18,7 @@ describe('Basic Developer Mail Tests', function () {
         await mail.deleteMailbox()
     })
 
-    it('Creatre Mailbox', async function () {
+    it('Create Mailbox', async function () {
 
         assert.notEqual(mail.name, undefined)
         assert.notEqual(mail.token, undefined)
@@ -55,7 +55,7 @@ describe('Basic Developer Mail Tests', function () {
         await mail.sendMessage(letter)
 
         let messagesIds = await mail.getMessagesIds()
-        let message = await mail.getMessageById(messagesIds[0])
+        let message = await mail.getMessage(messagesIds[0])
 
         let result = message.includes(mail.name)
 
@@ -74,6 +74,16 @@ describe('Basic Developer Mail Tests', function () {
             assert.isNotEmpty(message.key)
             assert.isNotEmpty(message.value)
         })
+    })
+
+    it('Delete Message By Id', async function() {
+        await mail.sendMessage(letter)
+
+        let messagesIds = await mail.getMessagesIds()
+
+        let result = await mail.deleteMessage(messagesIds[0])
+
+        assert.isTrue(result)
     })
 
     it('Delete Mailbox', async function () {
