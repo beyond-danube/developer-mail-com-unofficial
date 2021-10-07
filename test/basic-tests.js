@@ -2,7 +2,7 @@ const Mailbox = require('../index').Mailbox
 const assert = require('chai').assert
 
 describe('Basic Developer Mail Tests', function () {
-    this._timeout = 10000
+    this._timeout = 20000
 
     let mail
 
