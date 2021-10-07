@@ -1,16 +1,34 @@
 {
   "name": "developer-mail-com-unofficial",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Wrapper for developermail.com disposable email service",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "mail",
+    "email",
+    "temporary",
+    "disposable",
+    "developer"
+  ],
+  "author": {
+    "name": "Alexey Siniavtsev",
+    "email": "alexey.snv@gmail.com",
+    "url": "https://siniavtsev.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beyond-danube/developer-mail-com-unofficial.git"
+  },
+    "bugs": "https://github.com/beyond-danube/developer-mail-com-unofficial/issues",
+    "homepage": "https://www.npmjs.com/package/developer-mail-com-unofficial",    
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.21.4",
+    "axios": "^0.21.4"
+  },
+  "devDependencies": {
     "chai": "^4.3.4",
     "mocha": "^9.1.2"
   }
