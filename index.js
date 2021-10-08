@@ -38,10 +38,12 @@ class Mailbox {
     name
     token
     authHeader
+    email
     constructor(name, token) {
         this.name = name;
         this.token = token;
         this.authHeader = { headers: { 'X-MailboxToken': this.token } }
+        this.email = `${this.name}@developermail.com`
     }
 
     async createMailbox() {
