@@ -2,7 +2,7 @@ const Mailbox = require('../index').Mailbox
 const assert = require('chai').assert
 
 describe('Basic Developer Mail Tests', function () {
-    this._timeout = 20000
+    this._timeout = 30000
 
     let mail
 
@@ -32,10 +32,10 @@ describe('Basic Developer Mail Tests', function () {
     })
 
     it('Send message to Mailbox', async function() {
+        await mail.sendMessage(letter)
         let messagesBeforeSend = await mail.getMessagesIds()
 
         let result = await mail.sendMessage(letter)
-
         let messagesAfterSend = await mail.getMessagesIds()
 
         assert.equal(result, true)

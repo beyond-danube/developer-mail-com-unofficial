@@ -99,7 +99,7 @@ class Mailbox {
 
     async sendMessage(mail) {
 
-        let config = this.authHeader
+        let config = Object.assign({}, this.authHeader)
 
         config.headers['Content-Type'] = 'application/json'
         let result = await axios.put(devMailApi.messagesUrl(this.name), mail, this.authHeader)
