@@ -32,10 +32,10 @@ describe('Basic Developer Mail Tests', function () {
     })
 
     it('Send message to Mailbox', async function() {
+        await mail.sendMessage(letter)
         let messagesBeforeSend = await mail.getMessagesIds()
 
         let result = await mail.sendMessage(letter)
-
         let messagesAfterSend = await mail.getMessagesIds()
 
         assert.equal(result, true)
