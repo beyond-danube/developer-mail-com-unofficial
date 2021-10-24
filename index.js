@@ -38,10 +38,12 @@ class Mailbox {
     name
     token
     authHeader
+    email
     constructor(name, token) {
         this.name = name;
         this.token = token;
         this.authHeader = { headers: { 'X-MailboxToken': this.token } }
+        this.email = `${name}@developermail.com`
     }
 
     async createMailbox() {
@@ -50,6 +52,7 @@ class Mailbox {
         this.name = result.data.result.name
         this.token = result.data.result.token
         this.authHeader = { headers: { 'X-MailboxToken': this.token } }
+        this.email = `${this.name}@developermail.com`
 
         return responseHandler(result)
     }
@@ -97,10 +100,10 @@ class Mailbox {
 
     async sendMessage(mail) {
 
-        let config = Object.assign({}, this.authHeader)
+        let config = JSON.parse(JSON.stringify(this.authHeader))
 
         config.headers['Content-Type'] = 'application/json'
-        let result = await axios.put(devMailApi.messagesUrl(this.name), mail, this.authHeader)
+        let result = await axios.put(devMailApi.messagesUrl(this.name), mail, config)
 
         return responseHandler(result)
     }
