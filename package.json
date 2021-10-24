@@ -1,6 +1,6 @@
 {
   "name": "developer-mail-com-unofficial",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Wrapper for developermail.com disposable email service",
   "main": "index.js",
   "scripts": {
