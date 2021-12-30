@@ -1,5 +1,5 @@
 # developer-mail-com-unofficial
-![build tests](https://github.com/beyond-danube/developer-mail-com-unofficial/blob/change-actions-workflow/.github/workflows/node.js.yml/badge.svg)
+![build tests](https://github.com/beyond-danube/developer-mail-com-unofficial/actions/workflows/node.js.yml/badge.svg)
 
   
 Unofficial wrapper for https://www.developermail.com disposable email service.  
